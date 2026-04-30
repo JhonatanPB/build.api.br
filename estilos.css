@@ -4,5 +4,6 @@ body {
 
 h1 {
     color: gold;
-    font: size 60px;
+    font-size:  60px;
+    text-align: center;
 }
