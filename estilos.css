@@ -1,5 +1,5 @@
 body {
-    background-color:black
+ background: radial-gradient(circle at top, #1A1A1D, #0F0F10 70%);
 }
 
 h1 {
