@@ -1,9 +1,64 @@
-body {
- background: radial-gradient(circle at top, #1A1A1D, #0F0F10 70%);
+body{
+    margin:0;
+    height:100vh;
+
+    background-image:url("img-flor.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero{
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transform: translateY(-50px);
 }
 
 h1 {
-    color: gold;
-    font-size:  60px;
+    color: whitesmoke;
+    font-size:  100px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color:whitesmoke;
+    font-size:  30px;
+    text-align: center;
+}
+
+button{
+    padding:15px 40px;
+
+    font-size:18px;
+
+    border:1px solid white;
+
+    border-radius:8px;
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    background: white;
+
+    color: black;
+    
+    transform:scale(1.05);
+
     text-align: center;
 }
