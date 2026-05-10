@@ -2,7 +2,7 @@ body {
     margin: 0;
     height: 100vh;
 
-    background-image: url("img-flor.png");
+    background-image: url("../img/img-flor.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
