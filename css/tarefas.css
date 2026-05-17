@@ -1,7 +1,8 @@
 body{
   margin: 0;
+  overflow:hidden;
   height: 100vh;
-  background-image:url("../img/img-perfil.png");
+  background-image:url("../img/img-tarefas.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,8 +26,8 @@ body{
 }
 
 h3{
-  font-size: 20px;
   color: rgb(169, 171, 173);
+  font-size: 20px;
    background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,9 +37,10 @@ h3{
 
 a{
     color: rgb(132, 132, 132);
-  text-decoration: none; }
-  
-  .menu-btn{
+  text-decoration: none; 
+}
+
+.menu-btn{
     width: 180px;
     padding: 15px;
 

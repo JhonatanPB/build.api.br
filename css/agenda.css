@@ -24,7 +24,8 @@ body{
 
 }
 
-h3{
+h4{
+  font-size: 20px;
   color: rgb(169, 171, 173);
    background-size: cover;
   background-position: center;
@@ -39,4 +40,33 @@ a{
     
 }
 
+.menu-btn{
+    width: 180px;
+    padding: 15px;
+
+    margin-top: 15px;
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.menu-btn:hover{
+    background: rgba(255,255,255,0.15);
+}
+
+.menu-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logout-btn{
+    margin-top:400px;
+}
 
