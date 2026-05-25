@@ -1,0 +1,56 @@
+body{
+    background-image:url("../img/img-flor.png");
+}
+
+/* CONTEÚDO */
+.content{
+    flex:1;
+
+    padding:40px;
+
+    color:white;
+}
+
+.content h1{
+    font-size:45px;
+}
+
+/* CARD */
+.settings-card{
+    width:100%;
+
+    max-width:800px;
+
+    margin-top:30px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(10px);
+}
+
+.settings-card h2{
+    margin-top:0;
+}
+
+.settings-card p{
+    color:rgb(180,180,180);
+}
+
+/* BOTÃO */
+.theme-btn{
+    margin-top:20px;
+
+    padding:15px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    cursor:pointer;
+}
