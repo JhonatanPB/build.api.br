@@ -15,6 +15,11 @@ body{
     font-size:45px;
 }
 
+h3{
+    color: rgb(169, 171, 173);
+    font-size: 20px;
+}
+
 /* CARD */
 .settings-card{
     width:100%;
