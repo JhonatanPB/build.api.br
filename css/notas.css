@@ -149,27 +149,3 @@ body{
 }
 
 /* TEXTO DA NOTA */
-.note-card p{
-    margin:0;
-
-    line-height:1.6;
-}
-
-/* BOTÃO APAGAR */
-.delete-btn{
-    margin-top:20px;
-
-    width:140px;
-
-    padding:12px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:white;
-
-    cursor:pointer;
-
-    font-size:14px;
-}
