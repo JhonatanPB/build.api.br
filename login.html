@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="css/style.css" />
+ 
 </head>
 <body>
   <header class="header">
@@ -12,17 +13,23 @@
       <h1>Login</h1>
       <p><strong> Entre para continuar</strong></p>
 
-      <form class="login-form" onsubmit="event.preventDefault();">
-        <input class="login-input" type="email" name="email" placeholder="E-mail" required />
-        <input class="login-input" type="password" name="senha" placeholder="Senha" required />
-        <button class="btn" type="button" onclick="window.location.href='dashboard.html';">Entrar</button>
+      <form class="login-form" onsubmit="event.preventDefault(); if(validarLogin()) { window.location.href='dashboard.html'; }">
+        <input class="login-input" id="email" type="email" name="email" placeholder="E-mail" required />
+        <input class="login-input" id="senha" type="password" name="senha" placeholder="Senha" required />
+        <button class="btn" type="submit">Entrar</button>
       </form>
 
 
-      <p class="login-help">Sem cadastro? Em breve você poderá criar conta.</p>
+      <p class="login-help">Sem cadastro?
+        <a href="cadastro.html">Crie sua conta</a>
+      </p>
+
     </div>
-  </header>
+  </header> 
+
+<script src="js/login.js"></script>
 </body>
 </html>
+
 
 

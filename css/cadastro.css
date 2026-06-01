@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("../img/img-flor.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+}
+ 
+
+button:hover {
+    background: white;
+    
+    color: black;
+
+    transform: scale(1.05);
+
+    text-align: center;
+}
