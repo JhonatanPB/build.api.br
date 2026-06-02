@@ -1,35 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-  <link rel="stylesheet" href="css/style.css" />
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header class="header">
-    <div class="hero">
-      <h1>Login</h1>
-      <p><strong> Entre para continuar</strong></p>
 
-      <form class="login-form" onsubmit="event.preventDefault(); if(validarLogin()) { window.location.href='dashboard.html'; }">
-        <input class="login-input" id="email" type="email" name="email" placeholder="E-mail" required />
-        <input class="login-input" id="senha" type="password" name="senha" placeholder="Senha" required />
-        <button class="btn" type="submit">Entrar</button>
-      </form>
+    <header class="header">
 
+        <div class="hero">
 
-      <p class="login-help">Sem cadastro?
-        <a href="cadastro.html">Crie sua conta</a>
-      </p>
+            <div class="login-box">
 
-    </div>
-  </header> 
+                <h1>Login</h1>
 
-<script src="js/login.js"></script>
+                <p><strong>Entre para continuar</strong></p>
+
+                <form class="login-form"
+                    onsubmit="event.preventDefault(); if(validarLogin()) { window.location.href='dashboard.html'; }">
+
+                    <input
+                        class="login-input"
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="E-mail"
+                        required>
+
+                    <input
+                        class="login-input"
+                        id="senha"
+                        type="password"
+                        name="senha"
+                        placeholder="Senha"
+                        required>
+
+                    <button class="btn" type="submit">
+                        Entrar
+                    </button>
+
+                </form>
+
+                <p class="login-help">
+                    Sem cadastro?
+                    <a href="cadastro.html">Cadastres-se</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <script src="js/login.js"></script>
+
 </body>
 </html>
-
-
-

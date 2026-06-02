@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-</head>
-<body>
-    <link rel="stylesheet" href="css/cadastro.css">
-   
 
-    <h1>Crie sua conta</h1>
-    <form onsubmit="event.preventDefault();">
-        <input type="text" name="nome" placeholder="Nome Completo" required>
-        <input type="email" name="email" placeholder="E-mail" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit">Registrar</button>
-    </form>
-    
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <h1>Cadastro</h1>
+
+        <p><strong>Crie sua conta</strong></p>
+
+        <form class="login-form" onsubmit="event.preventDefault();">
+
+            <input
+                class="login-input"
+                type="text"
+                name="nome"
+                placeholder="Nome Completo"
+                required>
+
+            <input
+                class="login-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required>
+
+            <input
+                class="login-input"
+                type="password"
+                name="senha"
+                placeholder="Senha"
+                required>
+
+            <button type="submit">
+                Registrar
+            </button>
+
+        </form>
+
+        <p class="login-help">
+            Já possui conta?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
 </body>
+
 </html>

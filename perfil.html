@@ -11,10 +11,13 @@
 
 </head>
 <body>
+    
+
     <div class="container">
 
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <h3>BUILD</h3>
+
       <a href="notas.html" class="menu-btn"><i class="fa-regular fa-note-sticky"></i>Notas </a> 
       <a href="agenda.html" class="menu-btn"><i class="fa-regular fa-calendar"></i>Agenda</a>
       <a href="tarefas.html" class="menu-btn"><i class="fa-solid fa-list-check"></i>Tarefas</a>
@@ -30,5 +33,24 @@
 
   </div>
     
+
+    <script>
+      (function(){
+        const btn = document.querySelector('.menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        if(!btn || !sidebar) return;
+
+        btn.addEventListener('click', () => {
+          sidebar.classList.toggle('is-open');
+        });
+
+        document.addEventListener('click', (e) => {
+          if(window.innerWidth > 900) return;
+          if(!sidebar.classList.contains('is-open')) return;
+          if(sidebar.contains(e.target) || btn.contains(e.target)) return;
+          sidebar.classList.remove('is-open');
+        });
+      })();
+    </script>
 </body>
 </html>
