@@ -6,32 +6,60 @@
     <title>Perfil</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/perfil.css">
-
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
 
     <div class="container">
 
-    <div class="sidebar" id="sidebar">
-      <h3>BUILD</h3>
-
-      <a href="notas.html" class="menu-btn"><i class="fa-regular fa-note-sticky"></i>Notas </a> 
-      <a href="agenda.html" class="menu-btn"><i class="fa-regular fa-calendar"></i>Agenda</a>
-      <a href="tarefas.html" class="menu-btn"><i class="fa-solid fa-list-check"></i>Tarefas</a>
-      <a href="perfil.html" class="menu-btn"><i class="fa-regular fa-user"></i>Perfil</a>
-       <a href="config.html" class="menu-btn"><i class="fa-solid fa-gear"></i>Configurações</a>
-      <a href="dashboard.html" class="menu-btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Home</a>
-   
-    </div>
+        <div class="sidebar" id="sidebar">
+            <h3>BUILD</h3>
+            <a href="aparencia.html" class="menu-btn"><i class="fa-solid fa-palette"></i>Aparência</a>
+            <a href="info.html" class="menu-btn"><i class="fa-solid fa-circle-info"></i>Informações</a>
+            <a href="perfil.html" class="menu-btn"><i class="fa-regular fa-user"></i>Perfil</a>
+            <a href="dashboard.html" class="menu-btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Home</a>
+        </div>
   
-   <div class="content">
+        <div class="content">
+            
+            <div class="page-header">
+                <h1>Perfil</h1>
+                <p>Gerencie suas informações pessoais.</p>
+            </div>
 
-    </div>
+            <div class="profile-container">
+                
+                <div class="profile-card">
+                    
+                    <div class="avatar-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Foto de Lucas Almeida" class="profile-pic">
+                    </div>
 
-  </div>
-    
-</body>
+                    <div class="user-identification">
+                        <h2>Lucas Almeida</h2>
+                        <p class="user-role">Designer & Desenvolvedor</p>
+                    </div>
+
+                    <div class="info-group">
+                        
+                        <div class="info-item">
+                            <i class="fa-regular fa-envelope info-icon"></i>
+                            <span class="info-text">lucas@build.com</span>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone info-icon"></i>
+                            <span class="info-text">(11) 98765-4321</span>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot info-icon"></i>
+                            <span class="info-text">São Paulo, SP</span>
+                        </div>
+
+                    </div>
+
+                    <button class="btn-edit-profile">Editar perfil</button>
+
+                </div> </div> </div> </div> </body>
 </html>

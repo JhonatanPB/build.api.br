@@ -6,39 +6,125 @@
     <title>Agenda</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/agenda.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.css" rel="stylesheet">
-   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js"></script>
 </head>
 <body>
 
-   <div class="container">
+  <div class="container">
 
     <div class="sidebar" id="sidebar">
       <h4>BUILD</h4>
-
       <a href="notas.html" class="menu-btn"><i class="fa-regular fa-note-sticky"></i>Notas </a> 
-      <a href="agenda.html" class="menu-btn"><i class="fa-regular fa-calendar"></i>Agenda</a>
+      <a href="agenda.html" class="menu-btn active"><i class="fa-regular fa-calendar"></i>Agenda</a>
       <a href="tarefas.html" class="menu-btn"><i class="fa-solid fa-list-check"></i>Tarefas</a>
-      <a href="perfil.html" class="menu-btn"><i class="fa-regular fa-user"></i>Perfil</a>
       <a href="config.html" class="menu-btn"><i class="fa-solid fa-gear"></i>Configurações</a>
       <a href="dashboard.html" class="menu-btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Home</a>
-   
     </div>
 
-   <div class="content">
+    <div class="content">
+      
+      <div class="page-header">
+         <div class="header-titles">
+             <h1>Agenda</h1>
+             <p>Veja seus compromissos e datas importantes.</p>
+         </div>
+         <div class="calendar-controls">
+             <div class="btn-top">Hoje</div>
+             <div class="btn-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+             <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+         </div>
+      </div>
 
-    <h1>Agenda</h1>
+      <div class="agenda-container">
+          
+          <div class="agenda-box">
+              <h2 class="box-title">Junho 2026</h2>
+              
+              <div class="weekdays-container">
+                  <span class="weekday-name">Seg</span>
+                  <span class="weekday-name">Ter</span>
+                  <span class="weekday-name">Qua</span>
+                  <span class="weekday-name">Qui</span>
+                  <span class="weekday-name">Sex</span>
+                  <span class="weekday-name">Sáb</span>
+                  <span class="weekday-name">Dom</span>
+              </div>
+              
+              <div class="days-container">
+                  <span class="day-number dimmed">25</span>
+                  <span class="day-number dimmed">26</span>
+                  <span class="day-number dimmed">27</span>
+                  <span class="day-number dimmed">28</span>
+                  <span class="day-number dimmed">29</span>
+                  <span class="day-number dimmed">30</span>
+                  <span class="day-number dimmed">31</span>
+                  
+                  <span class="day-number">1</span>
+                  <span class="day-number">2</span>
+                  <span class="day-number">3</span>
+                  
+                  <div class="day-number current-active">
+                      <span>4</span>
+                  </div>
+                  
+                  <span class="day-number">5</span>
+                  <span class="day-number">6</span>
+                  <span class="day-number">7</span>
+                  <span class="day-number">8</span>
+                  <span class="day-number">9</span>
+                  <span class="day-number">10</span>
+                  <span class="day-number">11</span>
+                  <span class="day-number">12</span>
+                  <span class="day-number">13</span>
+                  <span class="day-number">14</span>
+                  <span class="day-number">15</span>
+                  <span class="day-number">16</span>
+                  <span class="day-number">17</span>
+                  <span class="day-number">18</span>
+                  <span class="day-number">19</span>
+                  <span class="day-number">20</span>
+                  <span class="day-number">21</span>
+                  <span class="day-number">22</span>
+                  <span class="day-number">23</span>
+                  <span class="day-number">24</span>
+                  <span class="day-number">25</span>
+                  <span class="day-number">26</span>
+                  <span class="day-number">27</span>
+                  <span class="day-number">28</span>
+                  <span class="day-number">29</span>
+                  <span class="day-number">30</span>
+                  
+                  <span class="day-number dimmed">1</span>
+                  <span class="day-number dimmed">2</span>
+                  <span class="day-number dimmed">3</span>
+                  <span class="day-number dimmed">4</span>
+                  <span class="day-number dimmed">5</span>
+              </div>
+          </div>
 
-     <div id='calendar'></div>
+          <div class="agenda-box">
+              <h2 class="box-title">Compromissos do Dia</h2>
+              
+              <div class="events-list-container">
+                  <div class="event-line">
+                      <span class="event-hour">11:30</span>
+                      <span class="event-description">Pegar o onibus</span>
+                  </div>
+                  
+                  <div class="event-line alert-highlight">
+                      <span class="event-hour">13:30</span>
+                      <span class="event-description">Apresentação do BUILD</span>
+                  </div>
+                  
+                  <div class="event-line">
+                      <span class="event-hour">15:00</span>
+                      <span class="event-description">Almoço</span>
+                  </div>
 
-   </div> 
+          
+                  </div>
+              </div>
+          </div>
 
-    
-
-
-  </div>
-
-</body>
+      </div> </div> </div> </body>
 </html>

@@ -1,21 +1,186 @@
-body{
-  background-image:url("../img/img-agenda.png");
+/* ==========================================
+   CONFIGURAÇÃO DA TELA INTEIRA (BODY)
+   ========================================== */
+body {
+    background-image: url("../img/img-agenda.png");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    margin: 0;                    
+    font-family: sans-serif;      
 }
 
-h4{
-   font-size: 20px;
-  color: rgb(169, 171, 173);
-   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* ==========================================
+   ESTRUTURA PRINCIPAL (AUMENTADA PARA CABER OS DOIS)
+   ========================================== */
+.content {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    max-width: 920px; /* Largura perfeita para alinhar os dois blocos médios */
 }
 
-h1{
-  font-size: 40px;
-  color: rgb(169, 171, 173);
-   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* Cabeçalho */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
+h1 {
+    font-size: 40px;
+    color: rgb(169, 171, 173);
+    margin: 0 0 5px 0;
+}
 
+.page-header p {
+    color: #8a8a8a;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Botões simulados superiores */
+.calendar-controls {
+    display: flex;
+    align-items: center;
+}
+
+.btn-top {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-right: 6px;
+}
+
+.btn-arrow {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-left: 4px;
+}
+
+/* ==========================================
+   CONTAINER FLEX (COLOCOU OS DOIS LADO A LADO)
+   ========================================== */
+.agenda-container {
+    display: flex;
+    gap: 20px; /* Espaço de separação entre o calendário e os eventos */
+    width: 100%;
+}
+
+/* AS DUAS BOXES COMPARTILHAM O MESMO TAMANHO E ESTILO */
+.agenda-box {
+    flex: 1; /* Faz as duas caixas terem exatamente a mesma largura proporcional */
+    background: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Nome do sistema na sidebar */
+h4 {
+    font-size: 20px;
+    color: rgb(169, 171, 173);
+    margin: 0; 
+}
+
+.box-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+/* ==========================================
+   LÓGICA DO CALENDÁRIO (BOX 1)
+   ========================================== */
+.weekdays-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.weekday-name {
+    width: 14.28%; 
+    text-align: center;
+    color: #555555;
+    font-size: 0.85rem;
+}
+
+.days-container {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+.day-number {
+    width: 14.28%; 
+    height: 36px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cccccc;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.day-number.dimmed {
+    color: #602d2d; 
+}
+
+.day-number.current-active {
+    background: #ffffff;
+    color: #111111;
+    font-weight: 600;
+    border-radius: 50%;
+    max-width: 36px; 
+    margin: 0 auto 8px auto; 
+}
+
+/* ==========================================
+   LÓGICA DOS COMPROMISSOS FAKES (BOX 2)
+   ========================================== */
+.events-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaço vertical entre as linhas de compromissos */
+}
+
+.event-line {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.event-hour {
+    color: #8a8a8a;
+    font-size: 0.95rem;
+    width: 60px; /* Tamanho fixo para deixar o texto da direita todo alinhado */
+}
+
+.event-description {
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+/* Destaque laranja idêntico à imagem para o segundo item */
+.event-line.alert-highlight .event-hour {
+    color: #872f2f; 
+    font-weight: 500;
+}
+
+.event-line.alert-highlight .event-description {
+    color: #ffffff; /* Texto levemente mais claro para dar destaque */
+}
