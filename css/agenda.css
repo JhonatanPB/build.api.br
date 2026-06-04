@@ -10,4 +10,12 @@ h4{
   background-repeat: no-repeat;
 }
 
+h1{
+  font-size: 40px;
+  color: rgb(169, 171, 173);
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 

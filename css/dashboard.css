@@ -11,5 +11,59 @@ h2{
 }
 
 
+.topo{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+}
+
+.card-texto{
+    flex:1;
+    min-height:180px;
+}
+
+.info-lateral{
+    width:180px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.card-data,
+.card-hora{
+    height:80px;
+}
+
+.cards-grid{
+    margin-top:20px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.card{
+    height:180px;
+}
 
 
+
+.content{
+    display:block !important;
+}
+
+.welcome-card{
+  
+    width:100%;
+    margin-bottom:20px;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}

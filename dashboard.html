@@ -28,33 +28,69 @@
     </div>
   
    <div class="content">
-      <div class="card">
-        <h3>Dashboard</h3>
-        <p>Bem-vindo(a)! Aqui vão aparecer seus dados. Por enquanto é um placeholder para você já ver o layout sem ficar branco.</p>
-      </div>
+
+    <div class="top-row">
+
+        <div class="welcome-card">
+            <h1>Dashboard</h1>
+
+            <p>
+                Bem-vindo ao Build. Organize suas tarefas,
+                compromissos e anotações em um único lugar.
+            </p>
+        </div>
+
+        <div class="date-column">
+
+            <div class="mini-card">
+                <span id="data"></span>
+            </div>
+
+            <div class="mini-card">
+                <span id="hora"></span>
+            </div>
+
+        </div>
+
     </div>
 
-  </div>
+    <div class="dashboard-grid">
 
+        <div class="card">
+            <h2>Notas</h2>
+        </div>
+
+        <div class="card">
+            <h2>Agenda</h2>
+        </div>
+
+        <div class="card">
+            <h2>Tarefas</h2>
+        </div>
+
+        <div class="card">
+            <h2>Perfil</h2>
+        </div>
+
+    </div>
+
+</div>
   <script>
-    (function(){
-      const btn = document.querySelector('.menu-toggle');
-      const sidebar = document.getElementById('sidebar');
-      if(!btn || !sidebar) return;
+function atualizarRelogio(){
 
-      btn.addEventListener('click', () => {
-        sidebar.classList.toggle('is-open');
-      });
+    const agora = new Date();
 
-      // fecha ao clicar fora (mobile)
-      document.addEventListener('click', (e) => {
-        if(window.innerWidth > 900) return;
-        if(!sidebar.classList.contains('is-open')) return;
-        if(sidebar.contains(e.target) || btn.contains(e.target)) return;
-        sidebar.classList.remove('is-open');
-      });
-    })();
-  </script>
+    document.getElementById("data").textContent =
+        agora.toLocaleDateString("pt-BR");
+
+    document.getElementById("hora").textContent =
+        agora.toLocaleTimeString("pt-BR");
+}
+
+atualizarRelogio();
+
+setInterval(atualizarRelogio,1000);
+</script>
 </body>
 </html>
 
