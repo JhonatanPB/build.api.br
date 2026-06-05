@@ -66,21 +66,3 @@ body{
 .task-card:hover{
     background: rgba(255,255,255,0.12);
 }
-
-.note-card{
-    width:100%;
-
-    padding:20px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,0.05);
-
-    backdrop-filter:blur(10px);
-
-    color:white;
-
-    box-sizing:border-box;
-
-    white-space:pre-wrap;
-}

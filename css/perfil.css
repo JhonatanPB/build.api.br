@@ -1,167 +1,129 @@
 body{
-  background-image:url("../img/img-config.png");
-  
+    background-image:url("../img/img-config.png");
+    overflow: hidden;
 }
 
 h3{
-  font-size: 20px;
-  color: rgb(169, 171, 173);
-   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    font-size:20px;
+    color:rgb(169,171,173);
+      font-family: 'cinzel',serif; 
 }
 
-/* ==========================================
-   LAYOUT DO CONTEÚDO PRINCIPAL
-   ========================================== */
-
-.content {
-    flex: 1; /* Faz a div ocupar todo o espaço restante ao lado da sidebar */
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    box-sizing: border-box;
+/* CONTEÚDO */
+.content{
+    flex:1;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    box-sizing:border-box;
 }
 
-/* Título e Subtítulo da Página */
-.page-header h1 {
-    font-family: 'Georgia', serif; /* Fonte elegante idêntica à foto */
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 8px;
-    font-weight: 400;
+/* TÍTULO */
+.page-header h1{
+    font-size:45px;
+    color:white;
+    margin-bottom:8px;
 }
 
-.page-header p {
-    color: #8a8a8a;
-    font-size: 1rem;
-    margin-bottom: 30px;
+.page-header p{
+    color:#8a8a8a;
+    margin-bottom:30px;
 }
 
-/* Container que centraliza o Card na área restante */
-.profile-container {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
-    flex-grow: 1;            /* Ocupa o espaço vertical dinâmico */
-    padding-bottom: 40px;    /* Margem de respiro inferior */
+/* CENTRALIZAÇÃO */
+.profile-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+    padding-bottom:40px;
 }
 
-/* ==========================================
-   O CARD DE PERFIL (GLASSMORPHISM)
-   ========================================== */
+/* CARD */
+.profile-card{
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    
+    
 
-.profile-card {
-    background: rgba(23, 23, 23, 0.65); /* Grafite semi-transparente */
-    backdrop-filter: blur(16px);        /* Desfoca o fundo de folhas pretas */
-    -webkit-backdrop-filter: blur(16px);/* Suporte para o navegador Safari */
-    border: 1px solid rgba(255, 255, 255, 0.04); /* Borda sutil imitando reflexo de vidro */
-    border-radius: 24px;                 /* Bordas arredondadas e modernas */
-    width: 100%;
-    max-width: 440px;                    /* Largura ideal do card da imagem */
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;                 /* Alinha todos os itens internos no centro */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Sombra projetada para dar profundidade */
-    box-sizing: border-box;
+    width:100%;
+    max-width:440px;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-sizing:border-box;
 }
 
-/* Container da Foto (Círculo) */
-.avatar-wrapper {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Transforma o quadrado em círculo perfeito */
-    overflow: hidden;   /* Esconde os cantos da imagem que passarem do círculo */
-    margin-bottom: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.1); /* Borda fina iluminada na foto */
+/* TEXTO */
+.user-identification{
+    text-align:center;
+    margin-bottom:30px;
 }
 
-.profile-pic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Recorta e adapta a imagem sem distorcer ou esticar */
+.user-identification h2{
+    color:white;
+    margin-bottom:10px;
 }
 
-/* Textos de Identificação */
-.user-identification {
-    text-align: center;
-    margin-bottom: 30px;
+.user-role{
+    color:#cccccc;
 }
 
-.user-identification h2 {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 6px;
+/* INFORMAÇÕES */
+.info-group{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+    margin-bottom:25px;
 }
 
-.user-role {
-    color: #8a8a8a;
-    font-size: 0.9rem;
+.info-item{
+    background:white;
+
+    color:black;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
 }
 
-/* ==========================================
-   CAMPOS DE INFORMAÇÃO (EMAIL, FONE, ETC)
-   ========================================== */
-
-.info-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* Garante um espaçamento idêntico e controlado entre as linhas */
-    margin-bottom: 35px;
+.info-icon{
+    color:black;
+    width:20px;
+    text-align:center;
 }
 
-/* Cada bloco de informação */
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: rgba(15, 15, 15, 0.4); /* Fundo um pouco mais escuro que o card */
-    border: 1px solid rgba(255, 255, 255, 0.02);
-    padding: 14px 18px;
-    border-radius: 12px;
-    width: 100%;
-    box-sizing: border-box;
+.info-text{
+    color:black;
 }
 
-/* Ajuste dos ícones do FontAwesome para ficarem simétricos */
-.info-icon {
-    color: #8a8a8a;
-    font-size: 1.1rem;
-    width: 20px;        /* Largura fixa para alinhar os textos verticalmente */
-    text-align: center; /* Centraliza o ícone dentro do seu espaço de 20px */
+/* BOTÃO */
+.btn-edit-profile{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:white;
+
+    color:black;
+
+    cursor:pointer;
 }
 
-.info-text {
-    color: #cccccc;
-    font-size: 0.95rem;
-}
-
-/* ==========================================
-   BOTÃO EDITAR PERFIL
-   ========================================== */
-
-.btn-edit-profile {
-    background: rgba(255, 255, 255, 0.08); /* Botão escuro transparente */
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 12px 32px;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s; /* Transição suave na animação */
-}
-
-/* Microinterações (Feedback para quem clica) */
-.btn-edit-profile:hover {
-    background: rgba(255, 255, 255, 0.15); /* Clareia levemente ao passar o mouse */
-    transform: translateY(-1px);            /* Levanta sutilmente */
-}
-
-.btn-edit-profile:active {
-    transform: translateY(1px);             /* Afunda ao ser clicado */
+.btn-edit-profile:hover{
+    opacity:0.9;
 }

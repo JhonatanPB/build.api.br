@@ -1,5 +1,6 @@
 body{
  background-image:url("../img/img-config.png");
+ overflow: hidden;
 }
 
 /* CONTEÚDO */

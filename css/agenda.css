@@ -7,7 +7,15 @@ body {
     background-position: center;  
     background-repeat: no-repeat; 
     margin: 0;                    
-    font-family: sans-serif;      
+     
+}
+
+
+
+.sidebar h3{
+    color: rgb(169, 171, 173);
+    font-size: 20px;
+    
 }
 
 /* ==========================================
