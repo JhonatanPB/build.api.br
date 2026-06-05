@@ -10,3 +10,56 @@ h4{
   background-repeat: no-repeat;
 
 }
+
+/* 1. O CONTEINER PAI (Organiza a tela inteira) */
+.container {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem na tela: joga a sidebar (que está embaixo no HTML) para a esquerda */
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. A BARRA LATERAL (Fixa na esquerda) */
+.sidebar {
+    width: 260px;               /* Largura fixa da sua barra lateral */
+    min-width: 260px;
+    height: 100vh;
+    box-sizing: border-box;
+    /* Mantenha seus estilos visuais aqui (background, blur, etc.) */
+}
+
+/* 3. A ÁREA DO CONTEÚDO (Espaço que sobra à direita) */
+.content {
+    flex: 1;                    /* Faz essa área ocupar TODO o resto da tela */
+    display: flex;
+    align-items: center;        /* Centraliza o card verticalmente na tela */
+    justify-content: center;    /* Centraliza o card horizontalmente no espaço preto */
+    padding: 40px;              /* Margem de segurança para telas menores */
+    box-sizing: border-box;
+}
+
+/* 4. O CARD DE INFORMAÇÕES (Centralizado e controlado) */
+.info-card {
+    background: rgba(23, 23, 23, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    width: 100%;
+    max-width: 800px;           /* Evita que o texto estique demais para as pontas */
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(117, 115, 115, 0.815);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+h1{
+  color: rgb(255, 255, 255);
+}
+
+P{
+  color:rgb(176, 175, 175);
+}

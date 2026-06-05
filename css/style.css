@@ -58,7 +58,7 @@ button {
 button:hover {
     background: white;
     
-    color: black;
+    color: rgb(0, 0, 0);
 
     transform: scale(1.05);
 
@@ -66,32 +66,56 @@ button:hover {
 }
 
 /* Login (login.html) */
+body{
+    background-color: #f4f4f4;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.login-form{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+ .login-box{
+    background: blur(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    width: 340px;
+    padding: 35px 25px;  /* Diminui o espaçamento interno para ela não esticar à toa */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(207, 197, 197);
+    display: grid;
+    gap: 16px;
+    width: 100%;
+    max-width: 350px;       /* Diminui a largura máxima da caixa */
+    height: auto;
+ }
+ 
+
+ form{
+    display: grid;
+    gap: 10px;
+
+ }
+ 
+ h1{
+    color: #8a8a8a;
+    text-align: center;
+    font-size: 50px;
+ } 
+
+ .login-subtitle{
+    text-align: center;
+    color: #8a8a8a;
+    font-size: 30px;
+ }
+
+.login-box form input{
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-footer{
+    text-align: center;
     margin-top: 20px;
-}
-
-.login-input{
-    width: 320px;
-    max-width: 80vw;
-    padding: 18px 16px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.6);
-    background: rgba(0,0,0,0.15);
-    color: white;
-    outline: none;
-}
-
-.login-input::placeholder{
-    color: rgba(255,255,255,0.7);
-}
-
-.login-help{
-    margin-top: 16px;
-    color: rgba(255,255,255,0.85);
-    font-size: 14px;
-    text-align:center;
+    color:#ccc
 }

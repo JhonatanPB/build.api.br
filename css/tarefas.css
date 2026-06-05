@@ -1,13 +1,86 @@
 body{
-  background-image:url("../img/img-Tarefas.png");
+    background-image: url("../img/img-Tarefas.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-h3{
-  color: rgb(169, 171, 173);
-  font-size: 20px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+/* Título BUILD */
+.sidebar h3{
+    color: rgb(169, 171, 173);
+    font-size: 20px;
 }
 
+/* Área principal */
+.content{
+    flex: 1;
+    padding: 40px;
+    color: white;
+}
+
+/* Título da página */
+.content h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.content p{
+    color: rgb(180,180,180);
+    margin-bottom: 30px;
+}
+
+
+
+/* Lista de tarefas */
+.tasks-list{
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* Cards */
+.task-card{
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    font-size: 18px;
+
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+.task-card:hover{
+    background: rgba(255,255,255,0.12);
+}
+
+.note-card{
+    width:100%;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    box-sizing:border-box;
+
+    white-space:pre-wrap;
+}

@@ -7,94 +7,113 @@ body {
     background-repeat: no-repeat;
 }
 
-.hero {
-    height: 100vh;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
+/* ==========================================
+   A CAIXA DE LOGIN (GLASSMORPHISM)
+   ========================================== */
+.login-box {
+    /* Fundo escuro translúcido jateado */
+    background: rgba(23, 23, 23, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Tamanho controlado da caixinha */
+    width: 100%;
+    max-width: 360px;       /* Deixa a box menor e mais compacta */
+    padding: 40px 30px;     /* Espaçamento interno elegante */
+    height: auto;           /* Evita que ela estique para baixo à toa */
+    
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    text-align: center;
 }
 
-h1 {
+/* Reduz o tamanho do h1 especificamente dentro do login */
+.login-box h1 {
+    font-size: 2.2rem;     /* Diminui o login gigante de 100px para um tamanho perfeito */
     color: white;
-
-    font-size: 100px;
-
-    margin: 0;
+    margin-bottom: 5px;
+    font-family: Georgia, serif;
 }
 
-p {
-    color: white;
-
-    font-size: 25px;
+/* Estiliza o subtítulo dentro do login */
+.login-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
+/* ==========================================
+   FORMULÁRIO, INPUTS E BOTÃO (MAIORES)
+   ========================================== */
 .login-form {
     display: flex;
-
     flex-direction: column;
-
-    gap: 12px;
-
-    width: 400px;
-
-    max-width: 90vw;
+    gap: 16px;             /* Aumenta sutilmente o espaço entre os elementos */
+    width: 100%;           /* Ocupa a largura total da box interna */
 }
 
 .login-input {
-    padding: 15px;
-
-    border: 1px solid white;
-
+    /* Aumenta o tamanho dos inputs */
+    padding: 14px 16px;    /* Mais alto e confortável para digitar */
+    font-size: 0.95rem;    /* Letra um pouco maior */
+    
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-
-    background: transparent;
-
+    background: rgba(255, 255, 255, 0.05);
     color: white;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
 
-    font-size: 16px;
+/* Efeito ao clicar no input */
+.login-input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .login-input::placeholder {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.5);
 }
 
+/* Botão de Entrar/Cadastrar robusto */
 button {
-    padding: 15px;
-
-    border: 1px solid white;
-
+    padding: 14px;         /* Acompanha a mesma altura dos inputs */
+    border: none;
     border-radius: 8px;
-
-    background: transparent;
-
-    color: white;
-
-    font-size: 18px;
-
+    background: white;     /* Fundo branco sólido para destacar do vidro */
+    color: black;          /* Texto escuro para contraste */
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-
     transition: 0.3s;
+    width: 100%;
 }
 
 button:hover {
-    background: white;
-
-    color: black;
-
-    transform: scale(1.05);
+    background: #e5e5e5;
+    transform: scale(1.02);
 }
 
+/* ==========================================
+   RODAPÉ (LINKS)
+   ========================================== */
 .login-help {
     font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .login-help a {
-    color: #7c5cff;
-
+    color: white;          /* Link branco em negrito combina mais com o estilo minimalista */
+    font-weight: 600;
     text-decoration: none;
+}
+
+.login-help a:hover {
+    text-decoration: underline;
 }

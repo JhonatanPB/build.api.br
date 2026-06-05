@@ -1,58 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
     <div class="hero">
 
-        <h1>Cadastro</h1>
+        <div class="login-box">
 
-        <p><strong>Crie sua conta</strong></p>
+            <h1>Cadastro</h1>
 
-        <form class="login-form" onsubmit="event.preventDefault();">
+            <p class="login-subtitle">Crie sua conta para começar</p>
 
-            <input
-                class="login-input"
-                type="text"
-                name="nome"
-                placeholder="Nome:"
-                required>
+            <form>
+                <input type="text" placeholder="Nome:" required>
+                
+                <input type="email" placeholder="E-mail:" required>
+                
+                <input type="password" placeholder="Senha:" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
 
-            <input
-                class="login-input"
-                type="email"
-                name="email"
-                placeholder="E-mail:"
-                required>
+            <div class="login-footer">
+                Já tem uma conta? 
+                <a href="login.html">Faça login</a>
+            </div>
 
-            <input
-                class="login-input"
-                type="password"
-                name="senha"
-                placeholder="Senha:"
-                required>
-
-            <button type="submit">
-                Registrar
-            </button>
-
-        </form>
-
-        <p class="login-help">
-            Já possui conta?
-            <a href="login.html">Login</a>
-        </p>
+        </div>
 
     </div>
 
+    <script src="js/cadastro.js"></script>
 </body>
-
 </html>
