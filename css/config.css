@@ -1,12 +1,149 @@
-body{
-  background-image:url("../img/img-config.png");
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E CORPO
+   ========================================== */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("../img/img-config.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-h4{
-  color: rgb(169, 171, 173);
-  font-size: 20px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+h4 {
+    color: rgb(169, 171, 173);
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
 
+/* ==========================================
+   ESTRUTURA DE LAYOUT (FLEXBOX)
+   ========================================== */
+.container {
+    display: flex;             /* Faz a sidebar e o conteúdo ficarem lado a lado */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;          /* Evita barras de rolagem estranhas na tela */
+}
+
+/* Garante que o menu lateral mantenha seu comportamento flexível */
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* Os estilos visuais da sua sidebar (como o background borrado) 
+       podem vir do seu global.css ou adicionados aqui */
+}
+
+/* ALINHAMENTO DA ÁREA PRINCIPAL */
+.main-content {
+    flex: 1;                   /* Ocupa 100% do espaço restante à direita do menu */
+    display: flex;
+    align-items: center;       /* Centraliza o card verticalmente */
+    justify-content: center;   /* Centraliza o card horizontalmente */
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   O CARD DE GERENCIAMENTO (GLASSMORPHISM)
+   ========================================== */
+.account-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    width: 100%;
+    max-width: 500px;           /* Controla a largura idêntica à foto */
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    text-align: center;         /* Centraliza os textos e botões internamente */
+    box-sizing: border-box;
+}
+
+.account-card h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.account-status {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    margin: 0 0 30px 0;
+}
+
+.account-status strong {
+    color: #ffffff;             /* Destaca o e-mail em branco */
+    font-weight: 500;
+}
+
+/* Container dos botões */
+.account-actions {
+    display: flex;
+    flex-direction: column;     /* Coloca um botão por baixo do outro */
+    gap: 15px;                  /* Espaçamento perfeito entre eles */
+    width: 100%;
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DOS BOTÕES
+   ========================================== */
+
+/* 1. Botão Alterar Senha */
+.btn-secondary {
+    background: rgba(234, 234, 234, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* 2. Botão Sair do BUILD (Destaque Branco) */
+.btn-logout-main {
+    background: #ffffff;
+    color: #000000;             /* Texto preto para contrastar com o fundo branco */
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;      /* Remove o sublinhado padrão do link */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;                  /* Espaço entre o ícone da portinha e o texto */
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    font-family: sans-serif;
+}
+
+.btn-logout-main:hover {
+    background: #e6e6e6;        /* Um cinza bem sutil ao passar o rato */
+}
+
+.btn-logout-main:active {
+    transform: scale(0.98);     /* Efeito de clique físico real */
 }

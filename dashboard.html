@@ -21,74 +21,54 @@
        <a href="notas.html" class="menu-btn"><i class="fa-regular fa-note-sticky"></i>Notas </a> 
        <a href="agenda.html" class="menu-btn"><i class="fa-regular fa-calendar"></i>Agenda</a>
        <a href="tarefas.html" class="menu-btn"><i class="fa-solid fa-list-check"></i>Tarefas</a>
-       <a href="config.html" class="menu-btn"><i class="fa-solid fa-gear"></i>Configurações</a>
-       <a href="login.html" class="menu-btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Sair</a>
+       
+       <a href="config.html" class="menu-btn logout-btn"><i class="fa-solid fa-gear"></i>Configurações</a>
 
     </div>
   
-   <div class="content">
+  <div class="content">
 
-    <div class="top-row">
+    <div class="top-bar">
+      <div>
+        <h1>Bem-vindo ao BUILD</h1>
+        <p>Organize suas notas, tarefas e compromissos em um só lugar.</p>
+      </div>
 
-        <div class="welcome-card">
-            <h1>Dashboard</h1>
-
-            <p>
-                Bem-vindo ao Build. Organize suas tarefas,
-                compromissos e anotações em um único lugar.
-            </p>
-        </div>
-
-        <div class="date-column">
-
-            <div class="mini-card">
-                <span id="data"></span>
-            </div>
-
-            <div class="mini-card">
-                <span id="hora"></span>
-            </div>
-
-        </div>
-
+      <div class="relogio">
+        <span id="data"></span>
+        <span id="hora"></span>
+      </div>
     </div>
 
-    <div class="dashboard-grid">
+   <div class="cards-grid">
 
-        <div class="card">
-            <h2>Notas</h2>
+    <div class="card">
+        <h3>Notas</h3>
+        <p class="card-info">Você tem <strong>2 notas</strong> guardadas.</p>
+    </div>
+
+    <div class="card">
+        <h3>Agenda</h3>
+        <p class="card-info"><strong>3 compromissos</strong> marcados para os próximos dias.</p>
+    </div>
+
+    <div class="card">
+        <h3>Tarefas</h3>
+        <p class="card-info">Existem <strong>5 tarefas</strong> pendentes na sua lista.</p>
+    </div>
+
+    <div class="card">
+        <h3>Perfil</h3>
+        <div class="status-container">
+            <span class="status-dot"></span>
+            <p class="card-info">Perfil ativo</p>
         </div>
-
-        <div class="card">
-            <h2>Agenda</h2>
-        </div>
-
-        <div class="card">
-            <h2>Tarefas</h2>
-        </div>
-
-        <div class="card">
-            <h2>Perfil</h2>
-        </div>
-
     </div>
 
 </div>
-  <script>
-function atualizarRelogio(){
 
-    const agora = new Date();
-
-    document.getElementById("data").textContent =
-        agora.toLocaleDateString("pt-BR");
-
-    document.getElementById("hora").textContent =
-        agora.toLocaleTimeString("pt-BR");
-}
-
-atualizarRelogio();
-
-setInterval(atualizarRelogio,1000);
+</div>
+  
 </script>
 </body>
 </html>

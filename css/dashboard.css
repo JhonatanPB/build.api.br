@@ -1,5 +1,6 @@
 body{
   background-image:url("../img/img-dashboard.png");
+    overflow: hidden; /* Esconde as barras vertical e horizontal */
 }
 
 h2{
@@ -11,59 +12,65 @@ h2{
 }
 
 
-.topo{
-    display:flex;
-    gap:20px;
-    align-items:flex-start;
+/* Cabeçalho da Dashboard */
+.dashboard-header {
+    margin-bottom: 30px;
 }
 
-.card-texto{
-    flex:1;
-    min-height:180px;
+.dashboard-header h1 {
+    font-size: 2.5rem;   /* Tamanho do título limpo e moderno */
+    color: #ffffff;
+    margin: 0 0 8px 0;
 }
 
-.info-lateral{
-    width:180px;
-
-    display:flex;
-    flex-direction:column;
-
-    gap:20px;
+.dashboard-header p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
 }
 
-.card-data,
-.card-hora{
-    height:80px;
+/* ==========================================
+   O GRID DOS CARDS (ORGANIZAÇÃO EM DUAS COLUNAS)
+   ========================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide o espaço exatamente em 2 colunas */
+    gap: 20px;                             /* Espaçamento controlado entre os cards */
+    width: 100%;
+    max-width: 1100px;                     /* Impede que os cards estiquem demais para os lados */
+    box-sizing: border-box;
+    margin-left: 50px;
 }
 
-.cards-grid{
-    margin-top:20px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:20px;
+/* ==========================================
+   ESTILIZAÇÃO DO CARD (TAMANHO CONTROLADO)
+   ========================================== */
+.card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* CONTROLANDO A ALTURA: Tiramos o tamanho gigante anterior */
+    height: 180px;                         /* Define uma altura fixa menor e mais sutil */
+    padding: 25px;                         /* Respiro confortável dentro do card */
+    
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.card{
-    height:180px;
+/* Efeito sutil ao passar o mouse por cima do card */
+.card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.12);
 }
 
-
-
-.content{
-    display:block !important;
-}
-
-.welcome-card{
-  
-    width:100%;
-    margin-bottom:20px;
-}
-
-.dashboard-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+/* Títulos internos de cada card */
+.card h3 {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 12px 0;
+    font-weight: 600;
 }
