@@ -32,5 +32,6 @@ Base para crescimento futuro
 
 🛠️ Tecnologias
 linguagems: JavaScript, HTML, CSS
+
 Framework: React, node.js
 Outras ferramentas conforme evolução
